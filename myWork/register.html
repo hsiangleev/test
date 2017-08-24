@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册/登录</title>
+	<link rel="icon" href="images/lee.ico" >
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script src="js/register.js"></script>
+</head>
+<body>
+	<div class="content">
+		<div class="register flip-horizontal">
+			<p>会员注册</p>
+			<form action="">
+				<form action="">
+				<label>用户名:</label><input type="text" name="username" placeholder="请输入您的用户名" required>
+				<label>密码:</label><input type="password" name="password" placeholder="请输入密码" required>
+				<label>确认密码:</label><input type="repassword" name="repassword" placeholder="请再输入一次密码" required>
+				<label>姓名:</label><input type="name" name="name" placeholder="请输入您的真实姓名" required>
+				<label>电话号码:</label><input type="tel" name="tel" placeholder="请输入您的电话号码" required>
+				<label>详细地址:</label><input type="text" name="address" placeholder="请输入您的详细地址" required>
+				<label>验证码:</label><input class="confirm" type="text" name="confirm" placeholder="请输入验证码" required><span></span>
+				<label></label><input type="submit" value="注册">
+			</form>
+			<div class="link">
+				<a href="javascript:;" id="log">登录</a>
+			</div>
+		</div>
+		<div class="login">
+			<p>会员登录</p>
+			<form action="">
+				<label>用户名:</label><input type="text" name="username" placeholder="请输入您的用户名" autofocus  required>
+				<label>密码:</label><input type="password" name="password" placeholder="请输入密码" required>
+				<label>验证码:</label><input class="confirm" type="text" name="confirm" placeholder="请输入验证码" required><span></span>
+				<label></label><input type="submit" value="登录">
+			</form>
+			<div class="link">
+				<a href="javascript:;">忘记密码</a>
+				<a href="javascript:;" id="regis">注册</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

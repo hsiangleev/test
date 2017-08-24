@@ -1,0 +1,136 @@
+	
+    /************ content开始 ************/
+    @mixin myP{
+    	text-align: center;
+		color: #69f;
+		font-size: 26px;
+    }
+    @mixin label{
+    	display: inline-block;
+		width: 65px;
+		height: 40px;
+		line-height: 40px;
+		text-align: right;
+		margin-right: 10px;
+    }
+    @mixin input{
+    	width: 300px;
+    	border: 1px solid #999;
+		&:focus{
+			border: 1px solid #f69;
+		}
+		&[type=submit]{
+			height: 30px;
+			line-height: 26px;
+			text-align: center;
+			width: 80px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 14px;
+			color: #69f;
+			&:focus{
+				border: none;
+			}
+		}
+		&.confirm{
+			width: 100px;
+		}
+    }
+    @mixin link{
+    	width: 100px;
+		float: right;
+		a{
+			text-decoration: underline;
+			&:hover{
+				color: #f69;
+			}
+		}
+    }
+    body{
+    	width: 100%;
+    	height: 100%;
+    	background: url("../images/loginbg7.jpg") no-repeat;
+    	background-size: cover;
+    }
+	.content{
+		position: relative;
+		width: 400px;
+		height: 400px;
+		margin: 100px auto;
+		box-shadow: 0 5px 15px #333;
+		transform-style: preserve-3d;
+		// transform: rotateY(180deg);
+		.register{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			p{
+				@include myP;
+			}
+			form{
+				label{
+					@include label;
+				}
+				input{
+					@include input;
+				}
+				span{
+					display: inline-block;
+					width: 200px;
+					height: 30px;
+				}
+			}
+			.link{
+				@include link;
+				width: 40px;
+			}
+		}
+		//左右镜像
+		.flip-horizontal {
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1); 
+			-o-transform: scaleX(-1);
+			transform: scaleX(-1);
+			filter: fliph; /*IE*/
+		}
+		// 上下镜像
+		.flip-vertical {
+			-moz-transform: scaleY(-1);
+			-webkit-transform: scaleY(-1);
+			-o-transform: scaleY(-1);
+			transform: scaleY(-1);
+			filter: flipv; /*IE*/ 
+		}
+		.login{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			transform: translateZ(1px);
+			p{
+				@include myP;
+			}
+			form{
+				label{
+					@include label;
+				}
+				input{
+					@include input;
+				}
+				span{
+					display: inline-block;
+					width: 200px;
+					height: 30px;
+				}
+			}
+			.link{
+				@include link;
+			}
+		}
+	}
+
+
+
+
+    /************ content结束 ************/

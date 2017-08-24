@@ -1,0 +1,111 @@
+
+	.content{
+		width: 800px;
+		height: 500px;
+		border: 1px solid #ccc;	
+		margin: 50px auto;
+		padding: 15px;
+		box-shadow: 0 5px 15px #ccc;
+		.content-left{
+			width: 500px;
+			height: 100%;
+			float: left;
+			.bigImg{
+				width: 500px;
+				height: 80%;
+				border: 1px solid #cccc66;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.smallImg{
+				width: 500px;
+				height: 19%;
+				border: 1px solid #cccc66;
+				margin-top: -1px;
+				img{
+					width: 100px;
+					height: 80px;
+				}
+			}
+		}
+		.content-right{
+			width: 280px;
+			height: 100%;
+			float: right;
+			h2{
+				font-size: 20px;
+				height: 80px;
+				font-weight: 600;
+				line-height: 40px;
+			}
+			i{
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #aaa;
+			}
+			p{
+				height: 40px;
+				line-height: 40px;
+				&:first-of-type{
+					span{
+						text-decoration: line-through;
+					}
+				}
+				span.red{
+					color: #ff6633;
+					font-size: 20px;
+				}
+
+			}
+			.num{
+				position: relative;
+				height: 30px;
+				line-height: 30px;
+				input{
+					width: 50px;
+				}
+				.btn{
+					width: 20px;
+					height: 30px;
+					position: absolute;
+					top: 0;
+					left: 122px;
+					button{
+						width: 20px;
+						height: 12px;
+						position: absolute;
+						top: 3px;
+						line-height: 8px;
+						&:last-of-type{
+							top: 16px;
+						}
+					}
+				}
+				p{
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					height: 30px;
+					line-height: 30px;
+					right: 37px;
+					span{
+						text-decoration: none;
+					}
+				}
+			}
+			&>button{
+				width: 100px;
+				height: 40px;
+				background-color: #ff6633;
+				color: #fff;
+				margin: 10px 5px;
+				cursor: pointer;
+				&:last-of-type{
+					background-color: #999;
+				}
+			}
+		}
+	}

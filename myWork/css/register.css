@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/************ content开始 ************/
+body {
+  width: 100%;
+  height: 100%;
+  background: url("../images/loginbg7.jpg") no-repeat;
+  background-size: cover;
+}
+
+.content {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  box-shadow: 0 5px 15px #333;
+  transform-style: preserve-3d;
+}
+.content .register {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.content .register p {
+  text-align: center;
+  color: #69f;
+  font-size: 26px;
+}
+.content .register form label {
+  display: inline-block;
+  width: 65px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  margin-right: 10px;
+}
+.content .register form input {
+  width: 300px;
+  border: 1px solid #999;
+}
+.content .register form input:focus {
+  border: 1px solid #f69;
+}
+.content .register form input[type=submit] {
+  height: 30px;
+  line-height: 26px;
+  text-align: center;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #69f;
+}
+.content .register form input[type=submit]:focus {
+  border: none;
+}
+.content .register form input.confirm {
+  width: 100px;
+}
+.content .register form span {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+}
+.content .register .link {
+  width: 100px;
+  float: right;
+  width: 40px;
+}
+.content .register .link a {
+  text-decoration: underline;
+}
+.content .register .link a:hover {
+  color: #f69;
+}
+.content .flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: fliph;
+  /*IE*/
+}
+.content .flip-vertical {
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: flipv;
+  /*IE*/
+}
+.content .login {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateZ(1px);
+}
+.content .login p {
+  text-align: center;
+  color: #69f;
+  font-size: 26px;
+}
+.content .login form label {
+  display: inline-block;
+  width: 65px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  margin-right: 10px;
+}
+.content .login form input {
+  width: 300px;
+  border: 1px solid #999;
+}
+.content .login form input:focus {
+  border: 1px solid #f69;
+}
+.content .login form input[type=submit] {
+  height: 30px;
+  line-height: 26px;
+  text-align: center;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #69f;
+}
+.content .login form input[type=submit]:focus {
+  border: none;
+}
+.content .login form input.confirm {
+  width: 100px;
+}
+.content .login form span {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+}
+.content .login .link {
+  width: 100px;
+  float: right;
+}
+.content .login .link a {
+  text-decoration: underline;
+}
+.content .login .link a:hover {
+  color: #f69;
+}
+
+/************ content结束 ************/
+
+/*# sourceMappingURL=register.css.map */

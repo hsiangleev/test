@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="button">老虎</button>
+	<script>
+		window.AudioContext=window.AudioContext || window.webkitAudioContext;
+		(function (){
+			if(!window.AudioContext){
+				alert("不支持");
+
+			}
+
+			var btn=document.getElementById("button");
+			var audioCtx=new AudioContext();
+
+			var arrFrequency=[261.63, 293.66, 329.63, 261.63, 261.63, 293.66, 329.63, 261.63, 329.63, 349.23, 392.00, 329.63, 349.23, 392.00, 392.00, 440.00, 392.00, 349.23, 329.63, 261.63, 392.00, 440.00, 392.00, 349.23, 329.63, 261.63, 293.66, 196.00, 261.63, 293.66, 196.00, 261.63];
+			var start=0;
+			btn.addEventListener("mousemove", function (){
+
+				var frequency=arrFrequency[start];
+				//弹完之后重新开始
+				if(!arrFrequency[start]){
+					start=0;
+					frequency=arrFrequency[start]
+				}
+				start++;
+
+				//oscillator决定了声音的音调和音色，参数frequency,type
+				var oscillator=audioCtx.createOscillator();
+				//控制音量，参数gain,AudioParams
+				var gainNode=audioCtx.createGain();
+
+				//连接音色和音量
+				oscillator.connect(gainNode);
+				gainNode.connect(audioCtx.destination);
+
+				//sine square tri
+				oscillator.type="sine";
+				oscillator.frequency.value=frequency;
+
+				//  0/1:打开声音、关闭声音   
+				//在当前时间关闭声音
+				gainNode.gain.setValueAtTime(0,audioCtx.currentTime);
+
+				gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime+0.01);
+				oscillator.start(audioCtx.currentTime);
+
+				gainNode.gain.exponentialRampToValueAtTime(1,audioCtx.currentTime+0.5);
+				oscillator.stop(audioCtx.currentTime+0.5);
+			})
+
+			console.log(audioCtx)
+		})()
+	</script>
+</body>
+</html>
